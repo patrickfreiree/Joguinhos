@@ -1,2 +1,3 @@
-# joquinhos
-Joguinhos elaborados para praticar lógica. Linguagens: JS, HTML, CSS. 
+# Joquinhos
+Joguinhos elaborados para praticar a escrita e pensamento lógico.
+  
