@@ -1,5 +1,5 @@
 //código do ator
-let yAtor = 362;
+let yAtor = 366;
 let xAtor = 100;
 let colisao = false;
 let meuPonto = 0;
@@ -13,9 +13,19 @@ function movimentaAtor() {
     yAtor -= 3;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    yAtor += 3;
+    
+    if(podeSeMover()){
+       yAtor += 3;
+       }
+  
   }
 }
+
+function podeSeMover(){
+  return yAtor < 366;
+}
+
+
 
 function verificaColisao() {
   //collideRectCircle(x1, y1 width1, heigth1, cx, cy, diameter)
@@ -45,7 +55,10 @@ function verificaColisao() {
   }
   if (colisao) {
     voltaPosicaoInicial();
+    if (pontosMaiorQueZero){
+    meuPonto -= 1
   }
+ }
 }
 
 function voltaPosicaoInicial() {
@@ -64,4 +77,8 @@ function marcaPonto() {
     meuPonto += 1;
     voltaPosicaoInicial();
   }
+}
+
+function pontosMaiorQueZero(){
+  return meuPonto > 0
 }
