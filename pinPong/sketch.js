@@ -1,6 +1,7 @@
 let xBolinha = 300;
 let yBolinha = 200;
 let diametro = 20;
+let raio = diametro/2; 
 
 let velocidadeBolinhaX = 3;
 let velocidadeBolinhaY = 3;
@@ -15,10 +16,10 @@ function draw() {
   xBolinha += velocidadeBolinhaX;
   yBolinha += velocidadeBolinhaY;
   
-  if (xBolinha > width || xBolinha < 0) {
+  if (xBolinha + raio > width || xBolinha < 0) {
     velocidadeBolinhaX *= -1;
   }
-  if (yBolinha > height || yBolinha < 0){
+  if (yBolinha + raio > height || yBolinha < 0){
     velocidadeBolinhaY *= -1
   } 
 }
